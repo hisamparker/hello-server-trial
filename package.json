@@ -44,7 +44,7 @@
     "@keystone-next/fields-document": "^7.0.3",
     "@keystone-next/document-renderer": "^4.0.0",
     "@keystone-next/keystone": "^9.3.0",
-    "@keystone-next/types": "^12.0.0",
+    "@keystone-next/types": "^15.0.0",
     "@keystonejs/server-side-graphql-client": "^1.1.2",
     "@types/nodemailer": "^6.4.0",
     "dotenv": "^8.2.0",
