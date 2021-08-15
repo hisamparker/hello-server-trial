@@ -16,7 +16,7 @@ import { sendPasswordResetEmail } from './lib/mail';
 import { extendGraphqlSchema } from './mutations/index';
 
 const databaseURI =
-  process.env.DATABASE_URI || 'mongodb://localhost/hello-tutorials';
+  'mongodb+srv://leif:bum@hello-tutorials.wwt6n.mongodb.net/hello-tutorials?retryWrites=true&w=majority';
 
 // config our session, set a cookie (will have a jwt)
 const sessionConfig = {
