@@ -15,13 +15,12 @@ import { insertSeedData } from './seed-data';
 import { sendPasswordResetEmail } from './lib/mail';
 import { extendGraphqlSchema } from './mutations/index';
 
-const databaseURI =
-  'mongodb+srv://leif:bum@hello-tutorials.wwt6n.mongodb.net/hello-tutorials?retryWrites=true&w=majority';
+const databaseURI = process.env.MONGO_URI;
 
 // config our session, set a cookie (will have a jwt)
 const sessionConfig = {
   maxAge: 60 * 60 * 24 * 365, // how long user stays signed in
-  secret: 'i love leif and charlie and dervis',
+  secret: process.env.COOKIE_SECRET,
 };
 
 // make a function using createAuth method from keystone to add auth to our config
