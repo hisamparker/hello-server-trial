@@ -15,8 +15,8 @@ import { insertSeedData } from './seed-data';
 import { sendPasswordResetEmail } from './lib/mail';
 import { extendGraphqlSchema } from './mutations/index';
 
-const databaseURL =
-  process.env.DATABASE_URL || 'mongodb://localhost/hello-tutorials';
+const databaseURI =
+  process.env.DATABASE_URI || 'mongodb://localhost/hello-tutorials';
 
 // config our session, set a cookie (will have a jwt)
 const sessionConfig = {
@@ -64,7 +64,7 @@ export default withAuth(
     db: {
       // the adapter we're using is mongoose
       adapter: 'mongoose',
-      url: databaseURL,
+      url: databaseURI,
       // the database has an onConnect function (like a hook) that we can 'hook' into when the db connects
       // this is one option for injecting seed data
       async onConnect(keystone) {
