@@ -21,7 +21,7 @@ const databaseURI =
 // config our session, set a cookie (will have a jwt)
 const sessionConfig = {
   maxAge: 60 * 60 * 24 * 365, // how long user stays signed in
-  secret: process.env.COOKIE_SECRET,
+  secret: 'i love leif and charlie and dervis',
 };
 
 // make a function using createAuth method from keystone to add auth to our config
