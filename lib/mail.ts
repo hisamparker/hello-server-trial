@@ -74,6 +74,6 @@ export async function sendPasswordResetEmail(
   })) as MailResponse;
   // this says if we're using ethereal, grab the url to what was sent and use the nodemailer method, getTestMessageUrl, then we get a url to the email we sent
   if (process.env.MAIL_USER.includes('ethereal.email')) {
-    console.log(`💌 Message Sent!!!  Preview it at ${getTestMessageUrl(info)}`);
+    console.log(`💌 Message Sent!  Preview it at ${getTestMessageUrl(info)}`);
   }
 }
